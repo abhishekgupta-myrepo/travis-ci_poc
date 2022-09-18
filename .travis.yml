@@ -4,3 +4,8 @@ services:
 script:
   - docker build -t ciexample .
   - docker images ciexample
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: main
