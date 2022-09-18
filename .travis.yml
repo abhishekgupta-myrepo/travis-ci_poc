@@ -2,8 +2,8 @@ sudo: required
 services:
   - docker
 script:
-  - docker build -t ciexample .
-  - docker images ciexample
+  - docker build -t abhishekgupta86/travis_ci .
+  - docker images abhishekgupta86/travis_ci
 deploy:
   provider: script
   script: bash docker_push.sh
